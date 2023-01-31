@@ -1,0 +1,1 @@
+export const DOMAIN = "https://pokeapi.co/api/v2"

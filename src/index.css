@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Width */
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-ms: 90%;
+  --pokemon-item-width: 150px;
+
+  /* Color */
+  --color-grey-100: #e6e6e6;
+  --color-grey-200: #606060;
+  --color-blue-main: #1677ff;
+  --color-blue-main-overlay: #4096ff;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* GENERAL STYLE */
+.container {
+  width: var(--container-width-lg);
+  margin: 2rem auto;
+}
+
+.btn {
+  padding: 10px 15px;
+  background-color: var(--color-blue-main);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: all .3s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-blue-main-overlay);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-ms);
+  }
+}

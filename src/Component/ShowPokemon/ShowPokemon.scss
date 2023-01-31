@@ -1,0 +1,67 @@
+.showPokemonList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+  .showPokemon__item {
+    background-color: bisque;
+    padding: 1rem;
+    width: var(--pokemon-item-width);
+    height: var(--pokemon-item-width);
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+
+      .showPokemon__item-default {
+        visibility: hidden;
+        transform: translateX(-50%) rotateY(90deg);
+      }
+
+      .showPokemon__item-shiny {
+        visibility: visible;
+        transform: translateX(-50%) rotateY(-180deg);
+        transition-delay: .3s;
+        width: 75%;
+        height: 75%;
+      }
+
+      .showPokemon__item--name {
+        color: red;
+      }
+    }
+
+    .showPokemon__item-default,
+    .showPokemon__item-shiny {
+      background-position: center;
+      background-size: cover;
+      height: 70%;
+      width: 70%;
+      position: absolute;
+      left: 50%;
+      top: 0;
+    }
+
+    .showPokemon__item-default {
+      transition: all .3s ease-in;
+      transform: translateX(-50%) rotate(0);
+    }
+
+    .showPokemon__item-shiny {
+      visibility: hidden;
+      transition: all .3s ease-out;
+      transform: translateX(-50%) rotateY(-180deg);
+
+    }
+
+    .showPokemon__item--name {
+      text-align: center;
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: color .3s;
+    }
+  }
+}
